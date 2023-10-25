@@ -14,3 +14,4 @@ Design your own personal website using HTML, CSS and JavaScript.
 - In Objects, upload all your website files to the bucket.
 - Set the bucket permissions to allow public access by unchecking  all "Block public access" and update the Bucket Policy provided in "S3 Bucket Policy.txt". Remember to update the resource section for "Bucket-Name" with your your name for the bucket, in my case is "Resource": "arn:aws:s3:::aws-portfolio-website/*"
 
+### Personal website hosted on AWS 
