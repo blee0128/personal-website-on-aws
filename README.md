@@ -17,7 +17,7 @@ Link to my personal website: [Personal website](https://aws-portfolio-website.s3
 
 ## Step 3: Set up Code Pipeline CI/CD
 Problem:
-Everytime when we make any changes to our sourcecode, we need to manually upload the updated files onto the S3 bucket for our updated website
+- Everytime when we make any changes to our sourcecode, we need to manually upload the updated files onto the S3 bucket for our updated website
 
 Goal:
 - The goal for this CI/CD project is to allow changes made in the github reflect on our personal website hosting through AWS almost instantly
