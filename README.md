@@ -15,7 +15,7 @@ Process:
 
 Link to my personal website: [Personal website](https://aws-portfolio-website.s3.us-east-2.amazonaws.com/index.html) 
 
-## Step 3: Set up Code Pipeline CI/CD
+## Step 3: Set up CI/CD on Amazon CodePipeline 
 Problem:
 - Everytime when we make any changes to our sourcecode, we need to manually upload the updated files onto the S3 bucket for our updated website
 
