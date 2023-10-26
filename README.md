@@ -44,4 +44,16 @@ Process:
     - For Buiildspec specifications, select "Use a buildspec file"
 - Step 4: Add deploy stage
   - For Deploy provide, select "Amazon S3"
-  - For Bucket, select the bucket create in **Step 2**
+  - For Bucket, select the bucket create in **Step 2: Set Up Amazon S3 Bucket**
+- Step 5: Review
+  - Click "Create pipeline"
+
+Notes:
+- For first time user, you will encounter an error in the Build section, because there does not exist a YAML file.  
+# YAML
+object:
+  attributes:
+    - attr1
+    - attr2
+    - attr3
+  methods: [ getter, setter ]
