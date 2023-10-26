@@ -50,10 +50,21 @@ Process:
 
 Notes:
 - For first time user, you will encounter an error in the Build section, because there does not exist a YAML file.  
-# YAML
-object:
-  attributes:
-    - attr1
-    - attr2
-    - attr3
-  methods: [ getter, setter ]
+```text
+version: 0.2
+
+phases:
+  install:
+    commands:
+      - echo Nothing to install
+  build:
+    commands:
+      - echo Build started on `date`
+  post_build:
+    commands:
+      - echo Build completed on `date`
+artifacts:
+  files:
+    - '**/*'
+  base-directory: 'src'
+```
