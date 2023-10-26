@@ -53,7 +53,7 @@ Process:
   - Click "Create pipeline"
 
 Notes:
-- For first time user, you will encounter an error in the Build section, because there does not exist a YAML file for the buildspec.  
+- For first time user, you will encounter an error in the Build section, because there isn't a YAML file for the buildspec yet.  
 
 YAML file
 ```text
