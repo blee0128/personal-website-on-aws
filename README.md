@@ -80,6 +80,6 @@ artifacts:
 ### Personal Website CI/CD pipeline
 
 <p align="center">
-  <img src="img/CI//CD_pipeline.png">
+  <img src="img/CI:CD_pipeline.png">
 </p>
 
