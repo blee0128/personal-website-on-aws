@@ -25,7 +25,7 @@ Process:
                 "s3:GetObject"
             ],
             "Resource": [
-                "arn:aws:s3:::aws-portfolio-website/"
+                "arn:aws:s3:::aws-portfolio-website/*"
             ]
         }
     ]
