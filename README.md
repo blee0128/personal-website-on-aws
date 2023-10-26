@@ -18,6 +18,11 @@ Process:
 Link to my personal website: [Personal website](https://aws-portfolio-website.s3.us-east-2.amazonaws.com/index.html) 
 
 ## Step 3: Set up Code Pipeline CI/CD
+Problem:
+Everytime when we make any changes to our sourcecode, we need to manually upload the updated files onto the S3 bucket for our updated website
+
+Goal:
+- The goal for this CI/CD project is to allow changes made in the github reflect on our personal website hosting through AWS almost instantly
 
 Prerequisites:
 - HTML, CSS and JavaScript files for website is uploaded on a github repository (Another way is to have the files stored on CodeCommit)
@@ -44,12 +49,13 @@ Process:
     - For Buiildspec specifications, select "Use a buildspec file"
 - Step 4: Add deploy stage
   - For Deploy provide, select "Amazon S3"
+  - For Input artifacts, select "BuildArtifact"
   - For Bucket, select the bucket create in **Step 2: Set Up Amazon S3 Bucket**
 - Step 5: Review
   - Click "Create pipeline"
 
 Notes:
-- For first time user, you will encounter an error in the Build section, because there does not exist a YAML file.  
+- For first time user, you will encounter an error in the Build section, because there does not exist a YAML file for the buildspec.  
 
 YAML file
 ```text
@@ -71,4 +77,6 @@ artifacts:
   base-directory: 'src'
 ```
 
-- For more details on buildspec.yml file, go to [Create the buildspec file](https://docs.aws.amazon.com/codebuild/latest/userguide/getting-started-create-build-spec-console.html)
+- For more details on buildspec.yml file, you can learn more in the [Create the buildspec file](https://docs.aws.amazon.com/codebuild/latest/userguide/getting-started-create-build-spec-console.html)
+
+
