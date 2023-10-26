@@ -24,5 +24,24 @@ Prerequisites:
 
 Process:
 - Got to the AWS Management Console and open the Amazon CodePipeline
-- Step 1
-  - Click "Create pipeline" and enter a pipeline name
+- Click "Create pipeline" 
+- Step 1: Choose pipeline settings
+  - Enter a pipeline name
+- Step 2: Add source stage
+  - For Source provider,select "GitHub (Version 2)
+  - For Connection, click on "Connect to GitHub" to connect AWS to GitHub
+    -  For Create GitHub App connection, give it a connection name
+    -  click "Connect to GitHub"
+    -  For GitHub connection settings, click on "Install a new app". This will prompt you to confirm access to Github
+  - After connecting to GitHub, the repository that was granted access to AWS will show up in the Repository name. Select the personal website repository
+  - For Pipeline trigger, select "Push in a branch"
+  - For Branch name, select master
+- Step 3: Add build stage
+  - For Build provide, select "AWS CodeBuild"
+  - For Project name, click "Creating project"
+    - Give a project name, in my case is "personal-portfolio-codebuild"
+    - For environment, the operating system I am using is "Amazon Linux", the Runtime used is "Standard" and the Image used is "aws/codebuild/amazonlinux2-x86_64-standard:4.0"
+    - For Buiildspec specifications, select "Use a buildspec file"
+- Step 4: Add deploy stage
+  - For Deploy provide, select "Amazon S3"
+  - For Bucket, select the bucket create in **Step 2**
