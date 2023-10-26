@@ -34,7 +34,11 @@ Process:
 
 Link to my personal website: [Personal website](https://aws-portfolio-website.s3.us-east-2.amazonaws.com/index.html) 
 
-## Step 3: Set up CI/CD on Amazon CodePipeline 
+
+## Step 3: Deploy static Hosting using Route 53 and Cloudfront
+For more details on linking your domain name to amazon s3 bucket, you can learn more in the [Website Hosting: linking your domain name to amazon s3 bucket]([https://aws-portfolio-website.s3.us-east-2.amazonaws.com/index.html](https://ishwar-rimal.medium.com/website-hosting-linking-your-domain-name-to-amazon-s3-bucket-249120c75eaa)) 
+
+## Step 4: Set up CI/CD on Amazon CodePipeline 
 Problem:
 - Everytime when we make any changes to our sourcecode, we need to manually upload the updated files onto the S3 bucket for our updated website
 
