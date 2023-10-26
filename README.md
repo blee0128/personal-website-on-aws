@@ -77,4 +77,9 @@ artifacts:
 
 - For more details on buildspec.yml file, you can learn more in the [Create the buildspec file](https://docs.aws.amazon.com/codebuild/latest/userguide/getting-started-create-build-spec-console.html)
 
+### Personal Website CI/CD pipeline
+
+<p align="center">
+  <img src="img/CI//CD_pipeline.png">
+</p>
 
