@@ -13,6 +13,25 @@ Process:
 - In Objects, upload all your website files to the bucket.
 - Set the bucket permissions to allow public access by unchecking  all "Block public access" and update the Bucket Policy provided in "S3 Bucket Policy.txt". Remember to update the resource section for "Bucket-Name" with your your name for the bucket, in my case is "Resource": "arn:aws:s3:::aws-portfolio-website/*"
 
+```text
+  {
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "PublicReadGetObject",
+            "Effect": "Allow",
+            "Principal": "*",
+            "Action": [
+                "s3:GetObject"
+            ],
+            "Resource": [
+                "arn:aws:s3:::Bucket-Name/*"
+            ]
+        }
+    ]
+} 
+```
+
 Link to my personal website: [Personal website](https://aws-portfolio-website.s3.us-east-2.amazonaws.com/index.html) 
 
 ## Step 3: Set up CI/CD on Amazon CodePipeline 
