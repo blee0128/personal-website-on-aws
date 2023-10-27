@@ -61,9 +61,9 @@ Part 2: Redirect benjaminlee28.com and www.benjaminlee28.com to s3 bucket using 
   - For Record name, you will have it empty for benjaminlee28.com and you will place "www" for www.benjaminlee28.com
   - For Record type, Select "A - Routes traffic to an IPv4 address and some AWS resources"
   - For Value/Route traffic:
-    - For endpoint, select "Alist to S3 website endpoint"
+    - For endpoint, select "Alias to S3 website endpoint"
     - For Region, select the region used to create the S3 bucket in Step 2
-    - For S3 bucket, choose the s3 bucket
+    - For S3 bucket, choose the S3 bucket that was created 
     - Select "Create Record"
 
 Note:
@@ -104,13 +104,13 @@ Part 3: Change DNS setting in Route 53 to point to the distribution created with
 
 ## Step 5: Set up CI/CD on Amazon CodePipeline 
 Problem:
-- Everytime when we make any changes to our sourcecode, we need to manually upload the updated files onto the S3 bucket for our updated website. Also, we will need to create Invalidation in the CloudFront Distributions to cache the new updates in S3
+- Every time when we make any changes to our source code, we need to manually upload the updated files onto the S3 bucket for our updated website. Also, we will need to create Invalidation in the CloudFront Distributions to cache the new updates in S3
 
 Goal:
-- The goal for this CI/CD project is to allow changes made in the github reflect on our personal website hosting through AWS almost instantly
+- The goal for this CI/CD project is to allow changes made in the Github reflect on our personal website hosting through AWS almost instantly
 
 Prerequisites:
-- HTML, CSS and JavaScript files for website is uploaded on a github repository (Another way is to have the files stored on CodeCommit)
+- HTML, CSS and JavaScript files for website is uploaded on a Github repository (Another way is to have the files stored on CodeCommit)
 
 Process:
 - Go to the AWS Management Console and open the Amazon CodePipeline console
@@ -118,7 +118,7 @@ Process:
 - Step 1: Choose pipeline settings
   - Enter a pipeline name
 - Step 2: Add source stage
-  - For Source provider,select "GitHub (Version 2)
+  - For Source provider, select "GitHub (Version 2)
   - For Connection, click on "Connect to GitHub" to connect AWS to GitHub
     -  For Create GitHub App connection, give it a connection name
     -  click "Connect to GitHub"
@@ -131,7 +131,7 @@ Process:
   - For Project name, click "Creating project"
     - Give a project name, in my case is "personal-portfolio-codebuild"
     - For environment, the operating system I am using is "Amazon Linux", the Runtime used is "Standard" and the Image used is "aws/codebuild/amazonlinux2-x86_64-standard:4.0"
-    - For Buiildspec specifications, select "Use a buildspec file"
+    - For Buildspec specifications, select "Use a buildspec file"
 - Step 4: Add deploy stage
   - For Deploy provide, select "Amazon S3"
   - For Input artifacts, select "BuildArtifact"
