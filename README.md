@@ -104,7 +104,7 @@ Part 3: Change DNS setting in Route 53 to point to the distribution created with
 
 ## Step 5: Set up CI/CD on Amazon CodePipeline 
 Problem:
-- Everytime when we make any changes to our sourcecode, we need to manually upload the updated files onto the S3 bucket for our updated website. Also, we will need to create Invalidation in the CloudFront Distributions to recach to pull the updates
+- Everytime when we make any changes to our sourcecode, we need to manually upload the updated files onto the S3 bucket for our updated website. Also, we will need to create Invalidation in the CloudFront Distributions to cache the new updates in S3
 
 Goal:
 - The goal for this CI/CD project is to allow changes made in the github reflect on our personal website hosting through AWS almost instantly
