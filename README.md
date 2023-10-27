@@ -113,6 +113,7 @@ Prerequisites:
 - HTML, CSS and JavaScript files for website is uploaded on a Github repository (Another way is to have the files stored on CodeCommit)
 
 Process:
+Part 1: Build a pipeline
 - Go to the AWS Management Console and open the Amazon CodePipeline console
 - Click "Create pipeline" 
 - Step 1: Choose pipeline settings
@@ -138,6 +139,10 @@ Process:
   - For Bucket, select the bucket create in **Step 2: Set Up Amazon S3 Bucket**
 - Step 5: Review
   - Click "Create pipeline"
+
+Part 2: Creating a CloudFront Invalidation in CodePipeline using Lambda Actions
+- For more details on creating a CloudFront Invalidation in CodePipeline using Lambda Actions, you can learn more in [Create Invalidation]
+(https://medium.com/fullstackai/aws-creating-a-cloudfront-invalidation-in-codepipeline-using-lambda-actions-49c1fd3a3c31)
 
 Notes:
 - For first time user, you will encounter an error in the Build section, because there isn't a YAML file for the buildspec yet.  
