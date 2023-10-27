@@ -141,7 +141,7 @@ Part 1: Build a pipeline
   - Click "Create pipeline"
 
 Part 2: Creating a CloudFront Invalidation in CodePipeline using Lambda Actions
-- For more details on creating a CloudFront Invalidation in CodePipeline using Lambda Actions, you can learn more in [Create Invalidation]
+- For more details on creating a CloudFront Invalidation in CodePipeline using Lambda Actions, you can look through the step-by-step guide for [Create Invalidation]
 (https://medium.com/fullstackai/aws-creating-a-cloudfront-invalidation-in-codepipeline-using-lambda-actions-49c1fd3a3c31)
 
 Notes:
