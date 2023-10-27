@@ -35,7 +35,7 @@ Process:
 
 ## Step 3: Routing static website to domain name using Route 53
 Problem:
-- Currently, the website name is "https://benjaminlee28.com.s3.us-east-2.amazonaws.com/index.html", but I have a domain name www.benjaminlee28.com
+- Currently, the website name is "https://benjaminlee28.com.s3.us-east-2.amazonaws.com/index.html", but I want my personal website to be www.benjaminlee28.com
 
 Goal:
 - Route www.benjaminlee28.com and benjaminlee28.com to the s3 bucket created in step 2
@@ -44,8 +44,8 @@ Prerequisites:
 - a domain name
 
 Process:
-Part 1: Create the a new bucket with the bucket name "www.benjaminlee28.com"
-- The new bucket will have the same process as Step 2, but a slightly modified change in the static website hosting section
+Part 1: Redirect "www.benjaminlee28.com" to "benjaminlee28.com
+- Create a new bucket with the name "www.benjaminlee28.com" and it will have the same process as Step 2, but a slightly modified change in the static website hosting section
 - For static website hosting:
   - Instead of selecting "Host a static website" in the Hosting type section, you will need to select "Redirect requests for an object"
   - The Host name will be the bucket name created in Step 2, in my case is "benjaminlee28.com"
@@ -70,11 +70,41 @@ Note:
 - For linking your domain name to amazon s3 bucket, you can learn more in the [Website Hosting: linking your domain name to amazon s3 bucket](https://ishwar-rimal.medium.com/website-hosting-linking-your-domain-name-to-amazon-s3-bucket-249120c75eaa)
 - 
 ## Step 4: Deploy Static Website to AWS S3 with HTTPS using CloudFront
-Todo
+Problem:
+- Many internet service provider block not secure website, therefore some user will not be able to access my personal website
+
+Goal:
+-  Deploy a website, ensuring it's secure using AWS CloudFront
+
+Process:
+Part 1: Create certificate with AWS Certificate Manager
+- Go to the AWS Management Console and open the Amazon CodePipeline console
+- Click "Request certificate" and select "Request a public certificate" for the Certificate type
+- Enter the domain names, which is www.benjaminlee28.com and benjaminlee28.com
+- Select "DNS validation - recommended" for the Validation method
+- Click "Request"
+- For DNS validation, using the certificate, click "Create records in Route 53" to validate DNS. There should be 2 additional records of Type A in the Hosted zone in Route 53
+
+Part 2: Create Distribution with CloudFront
+- Go to the AWS Management Console and open the CloudFront console
+- Click "Create Distribution"
+- For Origin domain, DO NOT USE the S3 buckets provided in the dropdown because that is the wrong autocomplete website endpoint. Instead, go to S3 bucket with bucket name www.benjaminlee28.com Static website hosting section itself and retrieve the website endpoint of the bucket
+- For Viewer protocol policy in the Default cache behavior section, select "Redirect HTTP to HTTPS"
+- For Alternate domain name (CNAME) in the Settings section, click Add item and include www.benjaminlee28.com
+- For Custom SSL certificate in the Settings section, choose the certificate created in Part 1
+- Create another distribution with the same process for the benjaminlee28.com s3 bucket
+- We will need to go back to the "www.benjaminlee28.com" S3 bucket, and edit the static website hosting, where "https" will be selected in the Protocol section
+
+Part 3: Change DNS setting in Route 53 to point to the distribution created with Cloudfront
+- Go to the AWS Management Console and open the Route 53 console
+- In both the record benjaminlee28.com and www.benjaminlee28.com of type A created from the AWS Certificate Manger, edit the record with the following steps:
+  - For "Route traffic to", select "Alias to CloudFront distribution"
+  - The provided distribution should appear in the dropdown
+  - Click "Save"
 
 ## Step 5: Set up CI/CD on Amazon CodePipeline 
 Problem:
-- Everytime when we make any changes to our sourcecode, we need to manually upload the updated files onto the S3 bucket for our updated website
+- Everytime when we make any changes to our sourcecode, we need to manually upload the updated files onto the S3 bucket for our updated website. Also, we will need to create Invalidation in the CloudFront Distributions to recach to pull the updates
 
 Goal:
 - The goal for this CI/CD project is to allow changes made in the github reflect on our personal website hosting through AWS almost instantly
