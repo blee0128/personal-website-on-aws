@@ -1,9 +1,6 @@
 # Personal Website on AWS
-
 ## Introduction
-
-## Purpose
-
+In this guide, we will delve into the process of hosting a static website using a combination of AWS services: Amazon S3 for storage, Amazon CloudFront for content distribution, Route 53 for domain management, Lambda for serverless computing, and CodePipeline for continuous integration and deployment. Together, these services not only ensure your website is globally accessible with low latency but also automate the deployment process, ensuring your content is always up-to-date. 
 ## Features
 | Steps | Tasks |
 | ---- | ---- |
