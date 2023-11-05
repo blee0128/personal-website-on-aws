@@ -1,11 +1,8 @@
 # Personal Website on AWS
-
 ## Introduction
-
-## Purpose
-
+In this guide, we will delve into the process of hosting a static website using a combination of AWS services: Amazon S3 for storage, Amazon CloudFront for content distribution, Route 53 for domain management, Lambda for serverless computing, and CodePipeline for continuous integration and deployment. Together, these services not only ensure your website is globally accessible with low latency but also automate the deployment process, ensuring your content is always up-to-date. 
 ## Features
-| Steps | Tasks |
+| Steps | Description |
 | ---- | ---- |
 | Step 1 | Design Your Website |
 |Step 2 | Set Up Amazon S3 Bucket |
@@ -20,7 +17,7 @@ To host a static website on AWS, you need the following:
 - Basic knowledge of AWS services, web development and programming concepts.
 
 ## Usage
-Link to personal website: [www.benjaminlee28.com](https://www.benjaminlee28.com)
+Link to personal website: [www.benjaminlee28.com](http://www.benjaminlee28.com.s3-website.us-east-2.amazonaws.com/)
 
 Pipeline created for Deployment
 
