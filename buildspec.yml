@@ -13,4 +13,4 @@ phases:
 artifacts:
   files:
     - '**/*'
-  base-directory: 'personal-website'
+  # base-directory: 'personal-website'
