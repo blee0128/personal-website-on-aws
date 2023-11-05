@@ -17,7 +17,7 @@ To host a static website on AWS, you need the following:
 - Basic knowledge of AWS services, web development and programming concepts.
 
 ## Usage
-Link to personal website: [www.benjaminlee28.com](http://www.benjaminlee28.com.s3-website.us-east-2.amazonaws.com/)
+Link to personal website: [www.benjaminlee28.com](http://benjaminlee28.com.s3-website-us-east-1.amazonaws.com)
 
 Pipeline created for Deployment
 
