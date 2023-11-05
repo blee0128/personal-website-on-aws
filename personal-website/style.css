@@ -1,21 +1,13 @@
-/* GENERAL */
-
-
+/* General */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
-
-
-* {
-    margin: 10px;
-    padding: 10px;
-}
 
 body {
     font-family: 'Poppins', sans-serif;
 }
 
-
 html {
-    scroll-behavior: smooth;
+    /* scroll-behavior: smooth; */
+    scroll-behavior: auto;
 }
 
 h2,h3,h4 {
@@ -23,14 +15,315 @@ h2,h3,h4 {
 }
 
 h1 {
+    margin-top: 0;
+    font-size:50px;
     font-weight: bold;
+}
+
+h3{
+    font-size: 15px;
+    margin-bottom: 0;
 }
 
 p {
     color: rgb(85,85,85);
 }
-img {
-    width: 20vh;
+
+/* Header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    height: 10vh;
+    margin: 10px;
+}
+
+.portfolio-icon {
+    display: flex;
+    font-size: 30px;
+    align-items: center;
+    margin-left: 10px;
+}
+
+.directory-icon {
+    display: flex;
+    align-items: center;
+}
+
+.about-me-icon, .experiences-icon, .projects-icon, .contacts-icon {
+    cursor: pointer;
+    padding-left: 5px;
+    padding-right: 5px;
+    text-decoration: none;
+    color: grey;
+}
+
+.about-me-icon:hover, .experiences-icon:hover, .projects-icon:hover, .contacts-icon:hover {
+    cursor: pointer;
+    text-decoration: none;
+    color: white;
+    background-color: grey;
     border-radius: 50px;
-    margin-right: 10px;
+}
+
+/* home */
+.home-block{
+    display: flex;
+    height: 90vh;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+}
+
+.profile-pic {
+    display: flex;
+    align-content: center;
+    margin: 25px;
+}
+
+.profile-bio {
+    margin-left: 25px;
+    display: flex;
+    align-items: start;
+    flex-direction: column;
+
+}
+
+.profile-design {
+    height: 500px;
+    border-radius: 150%;
+}
+
+
+.button-home {
+    display: flex;
+
+}
+.resume-home, .gmail-home {
+    border-radius: 50px;
+    font-size: 15px;
+    cursor: pointer;
+    text-decoration: none;
+    margin-right: 20px;
+    padding: 10px;
+}
+
+.resume-home {
+    background-color: white;
+    color: grey;
+    border: 2px solid grey;
+    
+}
+
+.resume-home:hover {
+    color: white;
+    background-color: grey;
+    border: 2px solid grey;
+    
+}
+
+.gmail-home {
+    color: white;
+    background-color: grey;
+    border: 2px solid grey;
+}
+
+.gmail-home:hover {
+    background-color: white;
+    color: grey;
+    border: 2px solid grey;
+}
+
+.link-home {
+    display: flex;
+}
+
+.github-home, .linkedin-home {
+    display: flex;
+    height: 50px;
+    width: 45px;
+    justify-content: center;
+    margin: 10px;
+}
+
+
+/* About Me */
+.about-me-block {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+    margin: 10px;
+}
+
+.about-me-header-1, .about-me-header-2 {
+    display: flex;    
+}
+
+.about-me-content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.about-me-education {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 2px solid grey;
+    padding: 30px;
+    border-radius: 50px;
+}
+
+.about-me-education-img {
+    display: flex;
+    height: 25px;
+    width: 25px;
+}
+.about-me-education-title {
+    font-size: 25px;
+}
+
+.about-me-description {
+    display: flex;
+    width: 500px;
+    margin-left: 50px;
+}
+
+/* Experience */
+.experience-block {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+    margin: 10px;
+}
+
+.experience-header-1, .experience-header-2, .experience-info {
+    display: flex;
+}
+
+.experience-info {
+    display: flex;
+    flex-direction: row;
+}
+
+.experience-frontend, .experience-backend  {
+    border: 2px solid grey;
+    padding: 20px;
+    border-radius: 25px;
+    margin-left: 25px;
+    margin-right: 25px;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Projects */
+.project-block {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+    margin: 10px;
+}
+
+.project-header-1, .project-header-2 {
+    display: flex;
+}
+
+.project-grid {
+    display: flex;
+    flex-direction: column;
+    width: 800px;
+}
+
+.project-col-1{
+    display: flex;
+}
+
+.project-col-2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.project-col-1 {
+    border: 2px solid black;
+    padding: 25px;
+    border-radius: 25px;
+    margin-left: 25px;
+    margin-right: 25px;
+    padding: 25px;
+    margin-bottom: 50px;
+}
+
+.retail-store-clustering, .eda-for-loan-repayment {
+    border: 2px solid black;
+    padding: 25px;
+    border-radius: 25px;
+    margin-left: 25px;
+    margin-right: 25px;
+    padding: 25px;
+    width: 300px;
+}
+
+.personal-website-on-aws-title, .retail-store-clustering-title, .eda-for-loan-repayment-title {
+    font-size: 20px;
+}
+
+.personal-website-on-aws-github, .retail-store-clustering-github, .eda-for-loan-repayment-github {
+    border-radius:20px;
+    font-size: 15px;
+    cursor: pointer;
+    text-decoration: none;
+    margin-right: 20px;
+    padding: 10px;
+    background-color: white;
+    color: grey;
+    border: 2px solid grey;
+}
+
+.personal-website-on-aws-github:hover, .retail-store-clustering-github:hover, .eda-for-loan-repayment-github:hover {
+    border-radius:20px;
+    font-size: 15px;
+    cursor: pointer;
+    text-decoration: none;
+    margin-right: 20px;
+    padding: 10px;
+    color: white;
+    background-color: grey;
+    border: 2px solid grey;
+}
+
+
+/* Contact */
+.contact-me-block {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+    margin: 10px;
+}
+
+.contact-header-1, .contact-header-2, .contact-info {
+    display: flex;
+}
+
+.contact-info {
+    flex-direction: row;
+    border: 2px solid grey;
+    padding: 20px;
+    border-radius: 50px;
+}
+
+.gmail-link, .github-link, .linkedin-link {
+    display: flex;
+    height: 70px;
+    width: 60px;
+    margin-right: 25px;
+    margin-left: 25px;
 }
