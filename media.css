@@ -41,24 +41,17 @@
     .experience-info {
         flex-direction: column;
     }
-    .projet-block {
-        padding-top: 100px;
-        height: fit-content;
+    .project-block {
+        justify-content: center;
     }
     .project-grid {
-        align-items: center;
+        width: 380px;
     }
     .project-col-1 {
-        width: 280px;
-    }
-    .project-col-2 {
-        flex-direction: column;
-    }
-    .contact-info {
-        border: none;
-    }
-    .contact-me-block {
-        padding-top: 100px;
+        width: 350px;
+        display: flex;
+        justify-content: center;
+        align-content: center;
     }
     .personal-website-on-aws-content{
         display: none;
@@ -69,4 +62,11 @@
     .eda-for-loan-repayment-content {
         display: none;
     }
+    .contact-info {
+        border: none;
+    }
+    .contact-me-block {
+        padding-top: 100px;
+    }
+    
 }

@@ -245,21 +245,17 @@ p {
 
 .project-col-2 {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-between;
 }
 
 .project-col-1 {
-    border: 2px solid black;
-    padding: 25px;
-    border-radius: 25px;
-    margin-left: 25px;
-    margin-right: 25px;
-    padding: 25px;
-    margin-bottom: 50px;
+    display: flex;
+    flex-direction: column;
 }
 
-.retail-store-clustering, .eda-for-loan-repayment {
+
+.retail-store-clustering, .eda-for-loan-repayment, .personal-website-on-aws{
     border: 2px solid black;
     padding: 25px;
     border-radius: 25px;
@@ -267,11 +263,15 @@ p {
     margin-right: 25px;
     margin-bottom: 20px;
     padding: 25px;
-    width: 280px;
+    /* width: 280px; */
 }
 
 .personal-website-on-aws-title, .retail-store-clustering-title, .eda-for-loan-repayment-title {
     font-size: 20px;
+    cursor: pointer;
+}
+.personal-website-on-aws-details, .retail-store-clustering-details, .eda-for-loan-repayment-details {
+    margin-bottom: 20px;
 }
 
 .personal-website-on-aws-github, .retail-store-clustering-github, .eda-for-loan-repayment-github {
