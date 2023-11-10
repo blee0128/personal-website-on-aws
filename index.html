@@ -6,27 +6,28 @@
     <meta name="description" content="My personal Portfolio Website">
     <title>Personal Website</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="media.css">
     <script src="script.js"></script>
 </head>
 <body>
-    <div class="header">
+    <header class="header">
         <div class="portfolio-icon">
             <p>Portfolio</p>
         </div>
-        <div class="directory-icon">
+        <nav class="directory-icon">
             <a class="about-me-icon" href="#about-me">About me</a>
             <a class="experiences-icon" href="#experience">Experiences</a>
             <a  class="projects-icon" href="#project">Projects</a>
             <a class="contacts-icon" href="#contact-me">Contacts</a>
-        </div>
-    </div>
-    <div class="home-block" id="home">
+        </nav>
+    </header>
+    <section class="home-block" id="home">
         <div class="profile-pic">
             <img class="profile-design" src="image/personal_photo.jpg" alt="An image of my personal photo">
         </div>
         <div class="profile-bio">
             <div class="profile-title">
-                <h1>Hi, it's me Benjamin Yen Kit Lee</h1>
+                <h1>Hi, it's me Benjamin Lee</h1>
             </div>
             <div class="button-home">
                 <a class="resume-home" href="/personal-website/document/resume.pdf" target="_blank">Download CV</a>
@@ -38,8 +39,8 @@
             </div>
             
         </div>
-    </div>
-    <div class="about-me-block" id="about-me">
+    </section>
+    <section class="about-me-block" id="about-me">
         <div class="about-me-header-1">
             <h3>Get To Know More</h3>    
         </div>
@@ -48,7 +49,7 @@
         </div>
         <div class="about-me-content">
             <div class="about-me-education">
-                <div class="about-me-education-img"><img src="image/education.png" alt=""></div>
+                <div><img class="about-me-education-img" src="image/education.png" alt=""></div>
                 <div class="about-me-education-title">Education</div>
                 <div>B.Sc. Bachelors in Civil Engineering</div>
                 <div>B.Sc. Minor in Computer Science</div>
@@ -62,8 +63,8 @@
                 </p>
             </div>
         </div>
-    </div>
-    <div class="experience-block" id="experience">
+    </section>
+    <section class="experience-block" id="experience">
         <div class="experience-header-1">
             <h3>Explore My</h3>    
         </div>
@@ -93,9 +94,9 @@
             
         </div>
         
-    </div>
+    </section>
     
-    <div class="project-block" id="project">
+    <section class="project-block" id="project">
         <div class="project-header-1">
             <h3>Browse My Recent</h3>    
         </div>
@@ -106,7 +107,7 @@
             <div class="project-col-1">
                 <div>
                     <h3 class="personal-website-on-aws-title">Personal Website on AWS</h3>
-                    <p>This project is designed to deploy a static website involves not just creating HTML, CSS, and JavaScript 
+                    <p class="personal-website-on-aws-content">This project is designed to deploy a static website involves not just creating HTML, CSS, and JavaScript 
                         files but also leveraging cloud-based tools to enhance the speed, reliability, and efficiency of 
                         deployments. The cloud used in this project is Amazon Web Services (AWS). By using Amazon S3, a highly-scalable 
                         object storage service, developers can host their static website assets with ease. But the true magic comes in with 
@@ -119,23 +120,23 @@
             <div class="project-col-2">
                 <div class="retail-store-clustering">
                     <h3 class="retail-store-clustering-title">Retail Store Clustering</h3>
-                    <p>The Retail Store Clustering project is designed to serve as a practical exploration to segment and cluster retail stores based on 
+                    <p class="retail-store-clustering-content">The Retail Store Clustering project is designed to serve as a practical exploration to segment and cluster retail stores based on 
                         various characteristics and performance metrics, with the aim of deriving meaningful insights for targeted marketing, inventory 
                         management, and operational optimization.</p>
                     <a class="retail-store-clustering-github" href="https://github.com/blee0128/Retail-store-clustering">Github</a>
                 </div>
                 <div class="eda-for-loan-repayment">
                     <h3 class="eda-for-loan-repayment-title">Exploratory Data Analysis for Loan Repayment</h3>
-                    <p>The Loan Repayment project is designed to serve as a practical exploration of Machine Learning techniques to perform data preparation, 
+                    <p class="eda-for-loan-repayment-content">The Loan Repayment project is designed to serve as a practical exploration of Machine Learning techniques to perform data preparation, 
                         data exploration and data visualization to predic the loan risk or quality(loan repayment) on a given applicant.</p>
                     <a class="eda-for-loan-repayment-github" href="https://github.com/blee0128/Exploratory-Data-Analysis-on-Loan-Repayment-">Github</a>       
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 
    
-    <div class="contact-me-block" id="contact-me">
+    <section class="contact-me-block" id="contact-me">
         <div class="contact-header-1">
             <h3>Get in Tounch</h3>
         </div>
@@ -147,6 +148,6 @@
             <a class="github-link" href="https://github.com/blee0128" target="_blank"><img src="image/github.png" alt=""></a>
             <a class="linkedin-link" href="https://www.linkedin.com/in/benjamin-lee-776b11150/" target="_blank"><img src="image/linkedin.png" alt=""></a>
         </div>
-    </div>
+    </section>
 </body>
 </html>

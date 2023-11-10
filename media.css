@@ -1,0 +1,72 @@
+@media screen and (max-width: 1400px) {
+
+}
+  
+@media screen and (max-width: 1200px) {
+
+}
+  
+@media screen and (max-width: 600px) {
+    h3 {
+        margin-bottom: 20px;
+    }
+    .portfolio-icon {
+        padding-left: 10px;
+    }
+    .header {
+        display: block;
+        align-items: center;
+    }
+    .directory-icon {
+        display: flex;
+        justify-content: space-between;
+        width: fit-content;
+        padding-left: 20px;
+    }
+    .home-block {
+        flex-direction: column;
+    }
+    .profile-design {
+        height: 180px;
+    }
+    .about-me-content {
+        flex-direction: column;
+    }
+    .about-me-description {
+        width: 300px;
+    }
+    .experience-block {
+        margin-top: 0;
+    }
+    .experience-info {
+        flex-direction: column;
+    }
+    .projet-block {
+        padding-top: 100px;
+        height: fit-content;
+    }
+    .project-grid {
+        align-items: center;
+    }
+    .project-col-1 {
+        width: 280px;
+    }
+    .project-col-2 {
+        flex-direction: column;
+    }
+    .contact-info {
+        border: none;
+    }
+    .contact-me-block {
+        padding-top: 100px;
+    }
+    .personal-website-on-aws-content{
+        display: none;
+    }
+    .retail-store-clustering-content {
+        display: none;
+    }
+    .eda-for-loan-repayment-content {
+        display: none;
+    }
+}
