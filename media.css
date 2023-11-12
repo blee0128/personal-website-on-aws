@@ -1,4 +1,7 @@
 @media screen and (max-width: 600px) {
+    details {
+        font-size: 12px;
+    }
     .directory-icon {
         display: none;
     }
