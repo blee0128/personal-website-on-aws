@@ -246,7 +246,7 @@ p {
     justify-content: center;
     flex-direction: column;
 }
-.image {
+.image.left-button, .image.right-button {
     width: 25px;
     height: 25px;
     cursor: pointer;
